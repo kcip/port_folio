@@ -1,0 +1,52 @@
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin wrapper {
+  margin: calc(1rem + env(safe-area-inset-right)) 1rem 1rem 1rem;
+  // min-width: calc(100vw - 2rem);
+  min-height: calc(50vh - 2rem);
+  // margin: 1rem;
+}
+
+@mixin gridWrapper {
+  width: 90%;
+  padding: 0.5rem;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 0.2rem;
+  --min: 30ch;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+  grid-auto-flow: dense;
+}
+
+@mixin gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+@mixin gridImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  transition: all 300ms ease;
+}
+@mixin h2 {
+  font-family: var(--ff-secondary);
+  font-size: var(--font-size-xl);
+  letter-spacing: 2px;
+}
+
+@mixin width90 {
+  width: 90%;
+  margin: auto;
+}
+
+@mixin maxWidth {
+  max-width: 1200px;
+}

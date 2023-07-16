@@ -1,0 +1,63 @@
+@import "mixins";
+.thoughts {
+  &__wrapper {
+    background-color: var(--clr-light);
+    @include wrapper;
+    padding: 2rem;
+  }
+  &__text {
+    @include width90;
+    padding: 1rem 0;
+    h2 {
+      @include h2;
+      color: var(--fc-dark);
+    }
+    p {
+      text-align: center;
+      color: var(--fc-dark);
+      font-family: var(--ff-secondary);
+      font-size: var(--font-size-lg);
+    }
+  }
+  &__inner {
+    width: 90%;
+    margin: auto;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: -15px;
+      right: 0;
+      background-color: black;
+      width: 3px;
+      height: 100%;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: -30px;
+      right: 0;
+      background-color: black;
+      width: 105%;
+      height: 3px;
+    }
+  }
+  &__postsegment {
+    padding: 1rem 1rem 1rem 2rem;
+
+    aside {
+      padding: 1rem 0;
+    }
+  }
+  &__button {
+    @include width90;
+    padding: 2rem 0;
+
+    button {
+      float: right;
+    }
+  }
+}

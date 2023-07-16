@@ -1,0 +1,60 @@
+@import "mixins";
+.hero {
+  &__wrapper {
+    background-color: var(--clr-light);
+    @include wrapper;
+    display: flex;
+  }
+
+  &__inner {
+    @include flexCenter;
+    @include width90;
+    padding: 2rem;
+    @include maxWidth;
+  }
+  &__textWrapper {
+    @include flexCenter;
+    flex-direction: column;
+    width: 60%;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__text {
+    display: flex;
+    flex-direction: row;
+    font-family: var(--ff-hero);
+    font-size: 200px;
+    -webkit-text-stroke: 3px #fff;
+    color: #333;
+    letter-spacing: 3px;
+    text-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+  }
+  &__contactInfo {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3rem;
+  }
+  &__image {
+    width: 40%;
+    @include flexCenter;
+    flex-direction: column;
+
+    img {
+      width: 300px;
+      height: auto;
+      box-shadow: 15px 13px rgba(0, 0, 0, 0.75);
+    }
+  }
+
+  &__socials {
+    display: flex;
+  }
+
+  &__paragraphStyle {
+    color: var(--fc-black);
+  }
+}

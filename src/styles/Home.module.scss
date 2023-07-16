@@ -1,33 +1,5 @@
 .home {
   &__main {
-    background-color: #ced4da;
-    // max-width: var(--max-width);
-    width: calc(100vw - 2rem);
-    height: calc(100vh - 2rem);
-    margin: 1rem auto;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
-  &__image {
-    max-width: 800px;
-    max-height: 800px;
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-    place-self: center;
-  }
-  &__navigation {
-    grid-column: 3 / -1;
-    grid-row: 2 / -1;
-    position: relative;
-    place-self: flex-end;
-    padding: 2rem 3rem 2rem 2rem;
-
-    ul {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
+    background-color: var(--clr-white);
   }
 }

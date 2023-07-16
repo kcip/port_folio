@@ -1,38 +1,37 @@
 @import "resets";
 @import "mixins";
 @import "utilities";
-@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&family=Barlow+Semi+Condensed:wght@100;400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,700;1,300&family=Londrina+Solid:wght@400;900&family=Passion+One&display=swap");
 :root {
   //MAX WIDTH OF CONTENT
   --max-width: 1200px;
   //FONT FAMILY
-  --ff-primary: "Barlow Semi Condensed", sans-serif;
-  --ff-secondary: "Almarai", sans-serif;
+  --ff-primary: "Karla", sans-serif;
+  --ff-secondary: "Passion One", cursive;
+  --ff-hero: "Londrina Solid", cursive;
   //FONT SIZES
+  --font-size-xsm: clamp(1.25rem, 0.15vw + 1rem, 1.3rem);
   --font-size-sm: clamp(1.28rem, 0.17vw + 1.21rem, 1.43rem);
   --font-size-base: clamp(1.6rem, 0.34vw + 1.46rem, 1.9rem);
   --font-size-md: clamp(2rem, 0.61vw + 1.76rem, 2.53rem);
   --font-size-lg: clamp(2.5rem, 1vw + 2.1rem, 3.38rem);
-  --font-size-xl: clamp(3.5rem, 1.56vw + 2.5rem, 4.5rem);
+  --font-size-xl: clamp(3.5rem, 2.56vw + 2.5rem, 4.5rem);
   //FONT COLORS
   --fc-primary-dark: #212529;
-  --fc-secondary-dark: #343a40;
+  --fc-secondary-dark: #5f5959;
   --fc-primary-light: #f7f7f7;
   --fc-secondary-light: #ffffff;
   --fc-accent: #ff5e5b;
+  --fc-grey: #8d8d86;
+  --fc-dark: #625b5b;
 
   //COLORS
-  --clr-light:#FFFFFF;
-  --clr-dark: #212529;
-  --clr-primary: #E6E2DE;
-  --clr-secondary: #3E3E3E;
-  --clr-grey: #CCCCCC;
-  --clr-white: #F2F2F2;
-  --clr-dark-grey: #595959;
-  --clr-light-grey: #E9ECEF;
-  --clr-black: #343A40;
-  --clr-red: #ED7171: 
-//RADIUS
+  --clr-light: #ede8e8;
+  --clr-dark: #625b5b;
+  --clr-black: #3c3636;
+  --clr-white: #fff;
+  --clr-red: #ff5e5b;
+  //RADIUS
   --border-radius: 20px;
   --border-tl-radius: 20px;
   --border-tr-radius: 20px;
@@ -48,18 +47,20 @@ h1 {
   font-family: var(--ff-primary);
 }
 
+a {
+  font-family: "Passion One", cursive;
+}
 
-
-//UNIVERSAL STYLES FOR IMAGES
-.image_container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  border-radius: 10px;
-  
-  img {
-    border-radius: 20px;
-    padding: 1rem;
-  }
+h2 {
+  font-family: var(--ff-secondary);
+  font-size: var(--font-size-md);
+}
+h3 {
+  font-family: var(--ff-secondary);
+  font-size: var(--font-size-base);
+}
+p {
+  font-family: var(--ff-primary);
+  font-size: var(--font-size-base);
+  line-height: 1.8;
 }

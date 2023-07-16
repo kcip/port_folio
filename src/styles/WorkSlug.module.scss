@@ -1,0 +1,77 @@
+@import "mixins";
+.workSlug {
+  &__wrapper {
+    @include wrapper;
+    background-color: var(--clr-light);
+    min-height: calc(100vh - 2rem - 75px);
+    position: relative;
+  }
+  &__inner {
+    @include maxWidth;
+    min-height: inherit;
+    position: relative;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 5vw repeat(5, 1fr) 5vw;
+    grid-template-rows: 20vh 2fr 20vh;
+    min-height: inherit;
+    grid-gap: 2rem;
+  }
+  &__imagesWrapper {
+    grid-row: 2;
+    grid-column: 2 / span 3;
+    width: auto;
+    max-height: 350px;
+    position: relative;
+    align-self: center;
+  }
+  &__image {
+    height: inherit;
+    width: inherit;
+    img {
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+  &__details {
+    grid-row: 2;
+    grid-column: 5 / span 2;
+    align-self: center;
+  }
+  &__title {
+    color: var(--fc-primary-dark);
+    font-size: var(--font-size-xl);
+    letter-spacing: 0.5px;
+  }
+  &__description {
+  }
+  &__tech {
+    display: grid;
+    grid-template-rows: 2;
+    grid-template-columns: auto;
+    font-family: var(--ff-primary);
+    p {
+      grid-row: 1;
+      color: var(--fc-secondary-dark);
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    ul {
+      grid-row: 2;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      li {
+        color: var(--fc-secondary-dark);
+        font-size: var(--font-size-sm);
+        margin: 3px;
+      }
+    }
+  }
+  &__socials {
+    margin-top: 1rem;
+    display: flex;
+  }
+}

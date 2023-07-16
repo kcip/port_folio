@@ -1,0 +1,34 @@
+@import "mixins";
+.photoscomponent {
+  &__wrapper {
+    background-color: var(--clr-dark);
+    width: 100dvw;
+    min-height: calc(50vh - 2rem);
+    margin: 1rem 0;
+    padding: 2rem;
+  }
+  &__text {
+    width: 90%;
+    margin: auto;
+    padding: 1rem 0;
+    @include maxWidth;
+    h2 {
+      font-family: var(--ff-secondary);
+      color: var(--fc-primary-light);
+      font-size: var(--font-size-xl);
+      letter-spacing: 2px;
+      float: right;
+      padding: 1rem 0;
+    }
+  }
+  &__inner {
+    margin: 2rem auto;
+    @include maxWidth;
+  }
+  &__button {
+    @include flexCenter;
+    width: 90%;
+    margin: auto;
+    padding: 2rem 0;
+  }
+}

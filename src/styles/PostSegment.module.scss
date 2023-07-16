@@ -1,0 +1,14 @@
+.postsegment {
+  &__wrapper {
+    margin: 1rem 0;
+    h2 {
+      font-family: var(--ff-primary);
+      font-weight: bold;
+      color: var(--clr-black);
+    }
+    p {
+      font-family: var(--ff-primary);
+      color: var(--clr-dark);
+    }
+  }
+}
