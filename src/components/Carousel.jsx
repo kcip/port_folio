@@ -1,35 +1,53 @@
 "use client"
-import React, {useState, useEffect} from 'react'
+import { use, useState, useEffect } from "react";
+import apiFetch from "@/hooks/fetchData";
+import Image from "next/image";
+import LeftButton from "./LeftButton";
+import RightButton from "./RightButton";
 
-import { photos } from '@/utils/images';
+export default function Carousel() {
 
-console.log(photos)
-
-const Carousel = () => {
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [image, setImage] = [];
+  const [images, setImages] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
   
- const nextSlide = ()=> {
-    const newIndex = (currentIndex + 1) % image.length;
-    setCurrentIndex(newIndex)
-  }
 
-  const previousSlide = ()=> {
-    const newIndex = (currentIndex - 1 + image.length) % image.length;
-    setCurrentIndex(newIndex)
-  }
+  useEffect(()=> {
+   const fetchData = async ()=> {
+    const data = await apiFetch(`https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=beng&api_key=live_US5GcFynn6U6Q0vyKu7acNovoq1fbPS9kMzX4TsxTGEDM0dAVYeo6rFwjdlQ6Dq3`);
+
+    setImages(data)
+
+   }
+   
+   fetchData()
+  }, [])
+
+
+const prevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide === 0 ? images.length - 1 : prevSlide - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide === images.length - 1 ? 0 : prevSlide + 1));
+  };
+
+
+
+
+
 
   return (
-    <div>
-      <button onClick={previousSlide}>previous</button>
-    
-      {image && image.map((item) => (
-        console.log('28', item)
-      ))}
-      <button onClick={nextSlide}>next</button>
+    <div className="carousel">
+      <div className="carousel-viewport">
+        {images && (    
+          <img src={images[currentSlide].url} alt="image" /> 
+        )}
+      </div>
+      
+      <button className="carousel-prev" onClick={prevSlide}><LeftButton /></button>
+      <button className="carousel-next" onClick={nextSlide}><RightButton /></button>
     </div>
-  )
+  );
+
 }
 
-export default Carousel
