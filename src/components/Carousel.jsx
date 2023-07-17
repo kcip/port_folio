@@ -4,7 +4,7 @@ import apiFetch from "@/hooks/fetchData";
 import Image from "next/image";
 import LeftButton from "./LeftButton";
 import RightButton from "./RightButton";
-
+import styles from '@/styles/Carousel.module.scss'
 export default function Carousel() {
 
   const [images, setImages] = useState(null);
@@ -37,15 +37,17 @@ const prevSlide = () => {
 
 
   return (
-    <div className="carousel">
-      <div className="carousel-viewport">
+    <div className={styles.carousel__wrapper}>
+      <div className={styles.carousel__inner}>
         {images && (    
-          <img src={images[currentSlide].url} alt="image" /> 
+          <img src={images[currentSlide].url} alt="image" className={styles.carousel__image}/> 
         )}
       </div>
-      
-      <button className="carousel-prev" onClick={prevSlide}><LeftButton /></button>
-      <button className="carousel-next" onClick={nextSlide}><RightButton /></button>
+      <div className={styles.carousel__buttonsWrapper}>
+              <button className={`${styles.carousel__buttons} ${styles.carousel__previous}`} onClick={prevSlide}><LeftButton /></button>
+      <button className={`${styles.carousel__buttons} ${styles.carousel__next}`} onClick={nextSlide}><RightButton /></button>
+      </div>
+
     </div>
   );
 
