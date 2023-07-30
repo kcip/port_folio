@@ -22,6 +22,7 @@
       letter-spacing: 1px;
       font-family: var(--ff-secondary);
       color: var(--fc-secondary-dark);
+      color: #333;
     }
     &::after {
       content: "";
@@ -37,7 +38,8 @@
     grid-column: 2 / span 5;
     background: var(--clr-white);
     padding: 2rem 1rem;
-    // border-radius: 20px;
+    border-radius: 10px;
+    border: 2px solid #333;
   }
   &__cardWrapper {
     grid-row: 2;

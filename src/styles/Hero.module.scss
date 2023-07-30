@@ -9,7 +9,7 @@
   &__inner {
     @include flexCenter;
     @include width90;
-    padding: 2rem;
+    padding: 6rem 2rem;
     @include maxWidth;
   }
   &__textWrapper {
@@ -30,6 +30,7 @@
     color: #333;
     letter-spacing: 3px;
     text-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+    line-height: 250px;
   }
   &__contactInfo {
     display: flex;
@@ -47,6 +48,7 @@
       width: 300px;
       height: auto;
       box-shadow: 15px 13px rgba(0, 0, 0, 0.75);
+      @include borderRadius;
     }
   }
 

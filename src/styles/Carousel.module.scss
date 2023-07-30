@@ -3,9 +3,15 @@
   }
   &__inner {
     background: var(--clr-white);
+    border-radius: 10px;
+    border: 2px solid #333;
+    //temporary style
+    min-height: 350px;
   }
   &__image {
     padding: 0.5rem;
+
+    border-radius: 20px;
   }
   &__buttonsWrapper {
     width: 100%;

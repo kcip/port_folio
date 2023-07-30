@@ -3,7 +3,6 @@
   &__wrapper {
     @include wrapper;
     min-height: calc(100vh - 2rem - 75px);
-
     display: flex;
   }
   &__filler {

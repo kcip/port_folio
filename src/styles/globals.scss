@@ -1,7 +1,7 @@
 @import "resets";
 @import "mixins";
 @import "utilities";
-@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,700;1,300&family=Londrina+Solid:wght@400;900&family=Passion+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,700;1,300&family=Lobster&family=Londrina+Solid:wght@400;900&family=Open+Sans&family=Passion+One&display=swap");
 :root {
   //MAX WIDTH OF CONTENT
   --max-width: 1200px;
@@ -9,6 +9,8 @@
   --ff-primary: "Karla", sans-serif;
   --ff-secondary: "Passion One", cursive;
   --ff-hero: "Londrina Solid", cursive;
+  --ff-text-main: "Lobster", cursive;
+  --ff-text-secondary: "Open Sans", sans-serif;
   //FONT SIZES
   --font-size-xsm: clamp(1.25rem, 0.15vw + 1rem, 1.3rem);
   --font-size-sm: clamp(1.28rem, 0.17vw + 1.21rem, 1.43rem);
@@ -16,6 +18,7 @@
   --font-size-md: clamp(2rem, 0.61vw + 1.76rem, 2.53rem);
   --font-size-lg: clamp(2.5rem, 1vw + 2.1rem, 3.38rem);
   --font-size-xl: clamp(3.5rem, 2.56vw + 2.5rem, 4.5rem);
+  --font-size-BIG: clamp(4.5rem, 3vw + 2.5rem, 10.5rem);
   //FONT COLORS
   --fc-primary-dark: #212529;
   --fc-secondary-dark: #5f5959;

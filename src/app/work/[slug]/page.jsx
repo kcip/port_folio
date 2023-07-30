@@ -11,7 +11,6 @@ const Page = () => {
         <div className={styles.workSlug__content}>
           <div className={styles.workSlug__imagesWrapper}>
             <div className={styles.workSlug__image}>
-              {/* <Image src={image2} alt="image"/> */}
               <Carousel />
             </div>
             

@@ -19,6 +19,9 @@ const Work = () => {
             <WorkCard />
             <WorkCard />
             <WorkCard />
+            <div>
+              stuff here as well....
+            </div>
           </div>
         </div>
       </section>

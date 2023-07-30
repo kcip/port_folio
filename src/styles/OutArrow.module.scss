@@ -1,6 +1,10 @@
 .outArrow {
+  border-radius: 100%;
+
   svg {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1.5px solid #333;
   }
 }

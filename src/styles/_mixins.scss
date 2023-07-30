@@ -50,3 +50,7 @@
 @mixin maxWidth {
   max-width: 1200px;
 }
+
+@mixin borderRadius {
+  border-radius: 10px;
+}
